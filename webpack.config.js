@@ -62,7 +62,7 @@ const config = {
         use: ['vue-style-loader', 'css-loader', 'postcss-loader', 'sass-loader', {
           loader: 'sass-resources-loader',
           options: {
-            resources: [path.resolve('src/assets/style/init.scss')]
+            resources: [path.resolve('src/assets/style/common.scss')]
           }
         }],
         include: [path.resolve('src'), path.resolve('node_modules/element-ui/lib/theme-chalk')]

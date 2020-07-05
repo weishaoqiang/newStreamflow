@@ -3,13 +3,13 @@
     <div class="login-banner"></div>
     <div class="login-box">
       <div class="language">
-        <el-dropdown :hide-on-click="false">
+        <el-dropdown :hide-on-click="true" trigger="click" @command="changelang">
           <span class="el-dropdown-link">
             中文<i class="iconfont icon-vertical-more"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>中文</el-dropdown-item>
-            <el-dropdown-item>English</el-dropdown-item>
+            <el-dropdown-item command="zh">中文</el-dropdown-item>
+            <el-dropdown-item command="en">English</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>
@@ -68,13 +68,15 @@ export default {
     },
     remember(params) {
       this.rememberMe = !params
+    },
+    changelang(val) {
+      console.log(this)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/style/init.scss";
   .content {
     width: 100%;
     height: 100vh;

@@ -1,22 +1,11 @@
-$mainColor: #3D424D;
-$assistColorBlue: #3760EA;
-$assistColorGray: #8A8F99;
-$disabledColor: #C2C5CC;
-$warningColor: #DC5050;
+@import '@/assets/style/reset.scss';
+@import '@/assets/style/iconfont.scss';
 
 html, body {
   font-size: 14px;
-  color: $mainColor;
   font-family: MicrosoftYaHei;
 }
 
 div {
   box-sizing: border-box;
-}
-
-.content {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: #fff;
 }

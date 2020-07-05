@@ -1,2 +1,41 @@
-@import './reset.scss';
-@import './iconfint.scss'
+$mainColor: #3D424D;
+$assistColorBlue: #3760EA;
+$assistColorGray: #8A8F99;
+$disabledColor: #C2C5CC;
+$warningColor: #DC5050;
+$mainBgColor: #f8f9fe;
+$white: #fff;
+
+.content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: $mainBgColor;
+  color: $mainColor;
+  overflow: hidden;
+}
+
+// 公用的样式
+@mixin box-shadow($direction, $xOffset, $yOffset, $blurRadius, $spreadRadius, $Color) {
+  @if $direction == 'all' {
+    box-shadow: $xOffset $yOffset $blurRadius $spreadRadius $Color, -$xOffset -$yOffset $blurRadius $spreadRadius $Color;
+  }
+  @if $direction == 'bottom' {
+    box-shadow: 0 $xOffset $blurRadius $spreadRadius $Color, -0 -0 $blurRadius $spreadRadius $Color;
+  }
+  @if $direction == 'left' {
+    box-shadow: $xOffset 0 $blurRadius $spreadRadius $Color, -0 -0 $blurRadius $spreadRadius $Color;
+  }
+  @if $direction == 'top' {
+    box-shadow: 0 0 $blurRadius $spreadRadius $Color, -0 -$yOffset $blurRadius $spreadRadius $Color;
+  }
+  @if $direction == 'right' {
+    box-shadow: 0 0 $blurRadius $spreadRadius $Color, -$xOffset -0 $blurRadius $spreadRadius $Color;
+  }
+  @if $direction == 'left-right' {
+    box-shadow: $xOffset 0 $blurRadius $spreadRadius $Color, -$xOffset -0 $blurRadius $spreadRadius $Color;
+  }
+  @if $direction == 'top-bottom' {
+    box-shadow: 0 -$yOffset $blurRadius $spreadRadius $Color, -0 -$yOffset $blurRadius $spreadRadius $Color;
+  }
+}

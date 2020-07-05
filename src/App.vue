@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '@/assets/style/common.scss';
+  @import '@/assets/style/init.scss';
 
   .container {
     width: 100%;

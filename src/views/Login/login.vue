@@ -21,13 +21,13 @@
           <el-form-item class="form-field" prop="account">
             <div class="input-box">
               <i class="iconfont icon-account"></i>
-              <el-input placeholder="请输入账号" v-model="params.account"/>
+              <el-input :placeholder="$t('login.account')" v-model="params.account"/>
             </div>
           </el-form-item>
           <el-form-item class="form-field" prop="password">
             <div class="input-box">
               <i class="iconfont icon-pwd"></i>
-              <el-input placeholder="请输入密码" v-model="params.password"/>
+              <el-input :placeholder="$t('login.password')" v-model="params.password"/>
             </div>
           </el-form-item>
           <el-form-item class="form-field radio-form">
@@ -62,6 +62,9 @@ export default {
       }
     }
   },
+  mounted() {
+    console.log(this.$i18n)
+  },
   methods: {
     onSubmit(formName) {
       console.log(formName)
@@ -70,7 +73,9 @@ export default {
       this.rememberMe = !params
     },
     changelang(val) {
-      console.log(this)
+      // console.log(this)
+      window.localStorage.setItem('lang', val)
+      window.location.reload()()
     }
   }
 }

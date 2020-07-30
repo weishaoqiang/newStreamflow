@@ -10,7 +10,6 @@ const router = new VueRouter({
 
 // 处理路由跳转，这里可以用于判断token是否生效等
 router.beforeEach((to, from, next)=> {
-  console.log(to, from)
   next()
 })
 

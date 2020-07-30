@@ -9,5 +9,10 @@ export default [
     name: 'Index',
     meta: {},
     component: () => import(/* webpackChunkName: "operation" */  '@/views/Operation/index.vue')
+  }, {
+    path: '/process',
+    name: 'Process',
+    meta: {},
+    component: () => import(/* webpackChunkName: "operation" */  '@/views/Operation/process.vue')
   }
 ]
